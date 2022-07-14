@@ -7,21 +7,14 @@ function Calc() {
     document.addEventListener("click", (e) => {
       const elementos = e.target;
 
-      if (elementos.classList.contains("btn-num")) {
+      if (elementos.classList.contains("btn-num"))
         this.btnParaDisplay(elementos.innerText);
-      }
 
-      if (elementos.classList.contains("btn-clear")) {
-        this.apagaTudo();
-      }
+      if (elementos.classList.contains("btn-clear")) this.apagaTudo();
 
-      if (elementos.classList.contains("btn-delete")) {
-        this.apagaUm();
-      }
+      if (elementos.classList.contains("btn-delete")) this.apagaUm();
 
-      if (elementos.classList.contains("btn-equal")) {
-        this.realizaConta();
-      }
+      if (elementos.classList.contains("btn-equal")) this.realizaConta();
     });
   };
 
