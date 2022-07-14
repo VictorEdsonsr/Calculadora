@@ -1,9 +1,7 @@
 function Calc() {
   this.display = document.querySelector(".display");
 
-  this.inicia = () => {
-    this.cliqueBotoes();
-  };
+  this.inicia = () => this.cliqueBotoes();
 
   this.cliqueBotoes = () => {
     document.addEventListener("click", (e) => {
@@ -27,17 +25,11 @@ function Calc() {
     });
   };
 
-  this.btnParaDisplay = (texto) => {
-    this.display.value += texto;
-  };
+  this.btnParaDisplay = (texto) => (this.display.value += texto);
 
-  this.apagaTudo = () => {
-    this.display.value = "";
-  };
+  this.apagaTudo = () => (this.display.value = "");
 
-  this.apagaUm = () => {
-    this.display.value = this.display.value.slice(0, -1);
-  };
+  this.apagaUm = () => (this.display.value = this.display.value.slice(0, -1));
 
   this.realizaConta = () => {
     let conta = this.display.value;
